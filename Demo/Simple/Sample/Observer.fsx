@@ -1,4 +1,13 @@
-﻿open System.Windows.Forms
+﻿#r @"..\lib\Rx\System.Reactive.dll"
+#r @"..\lib\Rx\System.CoreEx.dll"
+#r @"..\lib\Rx\System.Threading.dll"
+#r @"System.Core.dll"
+#r @"WindowsBase.dll"
+
+#load "Observable.fs"
+open RxExtensions
+
+open System.Windows.Forms
 
 let form = new Form(Visible=true, TopMost=true) 
 
@@ -7,7 +16,8 @@ let form = new Form(Visible=true, TopMost=true)
 ///  - right is triggered when the right mouse button is down and the mouse is in the area
 let left,right =  
   form.MouseDown
-    |> Observable.merge form.MouseMove 
+    |> Observable.fromEvent
+    |> Observable.mergeWith (form.MouseMove |> Observable.fromEvent)
     |> Observable.filter (fun args ->  
           args.Button = MouseButtons.Left || 
           args.Button = MouseButtons.Right)
@@ -20,8 +30,6 @@ let leftSubscription =
   left 
     |> Observable.subscribe 
          (fun (x,y,_) -> printfn "Left (%d,%d)" x y) 
-
-#load "Observable.fs"
 
 let rightSubscription = // returns IDisposable
   right

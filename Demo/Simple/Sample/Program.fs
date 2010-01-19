@@ -1,4 +1,6 @@
-﻿open PLINQ
+﻿module Program
+
+open PLINQ
 open Sample.TestData
 
 let list3 = randomList bigint 100000

@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csp
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sample", "Sample\Sample.fsproj", "{D4693968-72E2-4FF0-9269-D4BAA4965758}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactive", "Reactive\Reactive.csproj", "{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,16 +35,6 @@ Global
 		{D4693968-72E2-4FF0-9269-D4BAA4965758}.Release|Mixed Platforms.Build.0 = Release|x86
 		{D4693968-72E2-4FF0-9269-D4BAA4965758}.Release|x86.ActiveCfg = Release|x86
 		{D4693968-72E2-4FF0-9269-D4BAA4965758}.Release|x86.Build.0 = Release|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Debug|x86.ActiveCfg = Debug|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Debug|x86.Build.0 = Debug|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Release|Any CPU.ActiveCfg = Release|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Release|Mixed Platforms.Build.0 = Release|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Release|x86.ActiveCfg = Release|x86
-		{60BFAA93-CB5C-4D55-9F20-57C529BFD4AD}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

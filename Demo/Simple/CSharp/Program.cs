@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace CSharp
 {
@@ -16,12 +14,9 @@ namespace CSharp
             return result;
         }
 
-        static void Main(string[] args)
+        static void Main()
         {
-            List<int> list = new List<int>();
-            list.Add(10);
-            list.Add(30);
-            list.Add(300);
+            var list = new List<int> {10, 30, 300};
 
             Console.WriteLine("Result = {0}", SumOfSquares(list));
             Console.ReadLine();
