@@ -4,15 +4,15 @@ open PLINQ
 open Sample.TestData
 
 let list3 = randomList bigint 100000
-let sq x = x * x
-let fac x = List.fold (*) 1I [1I..x]
+let sq x = 
+  //[1I..x] |> List.fold (fun acc i -> x + acc) 0I
+  x * x
  
 /// With parallel map and fold
 let sumOfSquares list =
   list
-    |> PSeq.adapt
-    |> PSeq.map fac
-    |> PSeq.fold (+) 0I
+    |> Seq.map sq
+    |> Seq.fold (+) 0I
     
 printfn "SumOfSquares is: %A" (sumOfSquares list3)    
 
