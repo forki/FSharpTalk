@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52f6e455-309b-4ed0-9981-8d4c00f6684c}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FSHarpDemoLib</RootNamespace>
+    <AssemblyName>FSHarpDemoLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Name>FSharpDemoLib</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="TimeHelper.fs" />
+    <None Include="Arithmetic.fsx" />
+    <None Include="Loops.fsx" />
+    <None Include="OptionTypes.fsx" />
+    <None Include="Lists.fsx" />
+    <Compile Include="Tuples.fsx" />
+    <None Include="UnionTypes.fsx" />
+    <None Include="RecordTypes.fsx" />
+    <None Include="SequenceExpressions.fsx" />
+    <None Include="FileHandling.fsx" />
+    <None Include="StructuralComparison.fsx" />
+    <None Include="MutableData.fsx" />
+    <None Include="Interfaces.fsx" />
+    <None Include="DictionaryAndMap.fsx" />
+    <None Include="SumOfSquares.fsx" />
+    <None Include="SumOfDigits.fsx" />
+    <None Include="Factorial.fsx" />
+    <None Include="Operators.fsx" />
+    <None Include="PatternMatching_InString.fsx" />
+    <None Include="Sundays.fsx" />
+    <None Include="Trees.fsx" />
+    <None Include="Palindrome.fsx" />
+    <None Include="PythagoreanTriple.fsx" />
+    <None Include="Primes.fsx" />
+    <None Include="FooBar.fsx" />
+    <None Include="Memoization.fsx" />
+    <Compile Include="Fibonnacci.fsx" />
+    <None Include="Exceptions.fsx" />
+    <None Include="TextEditor.fsx" />
+    <None Include="Parallel.fsx" />
+    <None Include="WebCrawl.fsx" />
+    <None Include="SolarSystem.fsx" />
+    <None Include="Yahoo.fsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FSharp.PowerPack">
+      <HintPath>C:\Program Files (x86)\FSharp-1.9.7.8\bin\FSharp.PowerPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>Microsoft.DirectX</Name>
+      <AssemblyName>Microsoft.DirectX.dll</AssemblyName>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>Microsoft.DirectX.Direct3D</Name>
+      <AssemblyName>Microsoft.DirectX.Direct3D.dll</AssemblyName>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2911.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>Microsoft.DirectX.Direct3DX</Name>
+      <AssemblyName>Microsoft.DirectX.Direct3DX.dll</AssemblyName>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <Import Project="$(ProgramFiles)\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
