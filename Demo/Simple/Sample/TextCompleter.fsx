@@ -24,7 +24,7 @@ let textBox2 =
     Multiline = true)
 form.Controls.Add textBox2
 
-// create a list with common words
+/// create a list with "common" words
 let data =
   ["hell"; "Hello"; "Halle"; "Bonn"; "Bonjour"; "Steffen"]
 
