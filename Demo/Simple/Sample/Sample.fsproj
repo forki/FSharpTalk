@@ -40,7 +40,7 @@
     <Compile Include="Observable.fs" />
     <Compile Include="Program.fs" />
     <None Include="Async.fsx" />
-    <None Include="AsyncWebRequest.fsx" />
+    <None Include="SyncWebRequest.fsx" />
     <None Include="Async_Complete.fsx" />
     <None Include="OpenClosed.fsx" />
     <None Include="Script.fsx" />
@@ -48,7 +48,6 @@
     <None Include="AsyncUI.fsx" />
     <None Include="Observer.fsx" />
     <None Include="AsyncDownload.fsx" />
-    <Compile Include="WordTree.fs" />
     <None Include="TextCompleter.fsx" />
   </ItemGroup>
   <ItemGroup>

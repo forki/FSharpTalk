@@ -1,4 +1,13 @@
-﻿open System.Windows.Forms
+﻿#r @"..\lib\Rx\System.Reactive.dll"
+#r @"..\lib\Rx\System.CoreEx.dll"
+#r @"..\lib\Rx\System.Threading.dll"
+#r @"System.Core.dll"
+#r @"WindowsBase.dll"
+
+#load "Observable.fs"
+open RxExtensions
+
+open System.Windows.Forms
 
 // setup UI
 let form = new Form(Visible=true, TopMost=true) 
@@ -29,6 +38,7 @@ let findWords prefix =
 // create observable
 let wordsFound =
   textBox1.TextChanged
+    |> Observable.fromEvent
     |> Observable.map (fun _ -> findWords textBox1.Text)
 
 
@@ -42,6 +52,7 @@ let observer1 =
 let observer2 =
   wordsFound 
     |> Observable.filter (fun words -> Seq.length words = 1)     
+    |> Observable.throttle (System.TimeSpan.FromSeconds(1.5))
     |> Observable.map (fun words -> Seq.head words)
     |> Observable.subscribe (fun word -> 
          printfn "Text completed"
