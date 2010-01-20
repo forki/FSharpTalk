@@ -22,7 +22,7 @@ let appReferences  = !+ @"src\app\**\*.csproj" |> Scan
 let testReferences = !+ @"src\test\**\*.csproj" |> Scan
 
 // tools
-let nunitPath = @".\Tools\NUnit\bin"
+let nunitPath = @".\Tools\NUnit"
 let fxCopRoot =
   let r = System.Environment.GetEnvironmentVariable("FXCOPROOT")
   if r <> "" && r <> null then r else 
