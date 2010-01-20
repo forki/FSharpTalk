@@ -3,9 +3,9 @@
 open PLINQ
 open Sample.TestData
 
-let list3 = randomList bigint 100000
-let sq x = 
-  //[1I..x] |> List.fold (fun acc i -> x + acc) 0I
+let list = randomList bigint 100000
+let sq x =   
+  //[1I..(abs x)] |> List.fold (fun acc i -> (abs x) + acc) 0I
   x * x
  
 /// With parallel map and fold
@@ -14,6 +14,8 @@ let sumOfSquares list =
     |> Seq.map sq
     |> Seq.fold (+) 0I
     
-printfn "SumOfSquares is: %A" (sumOfSquares list3)    
+list 
+  |> sumOfSquares
+  |> printfn "SumOfSquares is: %A"
 
 let ok = System.Console.ReadLine()
