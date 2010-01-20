@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Fake.SQLServerLib</name></assembly>
+<members>
+<member name="T:AssemblyInfo.ReturnNoneException183c26a427ae489c8fd92ec21a0c9a59">
+
+</member>
+<member name="T:AssemblyInfo.ReturnException183c26a427ae489c8fd92ec21a0c9a59">
+
+</member>
+<member name="T:AssemblyInfo">
+
+</member>
+<member name="T:Fake.SqlServer.ServerInfo">
+
+</member>
+<member name="M:Fake.SqlServer.RunScriptsFromDirectory(System.String,System.String)">
+<summary>
+ Runs all sql scripts from the given directory on the server  
+</summary>
+</member>
+<member name="M:Fake.SqlServer.RunScripts(System.String,System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Runs the given sql scripts on the server
+</summary>
+</member>
+<member name="M:Fake.SqlServer.DropAndCreateDatabase(System.String)">
+<summary>
+ Drops and creates the database (dropped if db exists. created nonetheless)
+</summary>
+</member>
+<member name="M:Fake.SqlServer.Disconnect(Fake.SqlServer.ServerInfo)">
+<summary>
+ Closes the connection to the server
+</summary>
+</member>
+<member name="M:Fake.SqlServer.runScript(Fake.SqlServer.ServerInfo,System.String)">
+<summary>
+ Runs a sql script on the server
+</summary>
+</member>
+<member name="M:Fake.SqlServer.CreateDb(Fake.SqlServer.ServerInfo)">
+<summary>
+ Drops the given InitialCatalog from the server (if it exists)
+</summary>
+</member>
+<member name="M:Fake.SqlServer.DropDb(Fake.SqlServer.ServerInfo)">
+<summary>
+ Drops the given InitialCatalog from the server (if it exists)
+</summary>
+</member>
+<member name="M:Fake.SqlServer.intitialCatalogExistsOnServer(Fake.SqlServer.ServerInfo)">
+<summary>
+ Checks wether the given InitialCatalog exists on the server    
+</summary>
+</member>
+<member name="M:Fake.SqlServer.getDatabase(Fake.SqlServer.ServerInfo)">
+<summary>
+ Gets the initial catalog as database instance
+</summary>
+</member>
+<member name="M:Fake.SqlServer.getDBName(Fake.SqlServer.ServerInfo)">
+<summary>
+ Gets the initial catalog name
+</summary>
+</member>
+<member name="M:Fake.SqlServer.getServerName(Fake.SqlServer.ServerInfo)">
+<summary>
+ Gets the name of the sercer
+</summary>
+</member>
+<member name="M:Fake.SqlServer.existDBOnServer(Fake.SqlServer.ServerInfo,System.String)">
+<summary>
+ Checks wether the given Database exists on the server
+</summary>
+</member>
+<member name="M:Fake.SqlServer.getDatabaseNamesFromServer(Fake.SqlServer.ServerInfo)">
+<summary>
+ gets the DatabaseNames from the server
+</summary>
+</member>
+<member name="M:Fake.SqlServer.getServerInfo(System.String)">
+<summary>
+ Gets a connection to the SQL server and an instance to the ConnectionStringBuilder
+</summary>
+</member>
+<member name="T:Fake.SqlServer">
+
+</member>
+</members>
+</doc>

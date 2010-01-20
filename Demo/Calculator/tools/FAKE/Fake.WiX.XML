@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Fake.WiX</name></assembly>
+<members>
+<member name="T:AssemblyInfo.ReturnNoneException183c26a427ae489c8fd92ec21a0c9a59">
+
+</member>
+<member name="T:AssemblyInfo.ReturnException183c26a427ae489c8fd92ec21a0c9a59">
+
+</member>
+<member name="T:AssemblyInfo">
+
+</member>
+<member name="T:Fake.WiX.WiXHelper.WiXParams">
+
+</member>
+<member name="M:Fake.WiX.WiXHelper.WiX(Microsoft.FSharp.Core.FSharpFunc`2{Fake.WiX.WiXHelper.WiXParams,Fake.WiX.WiXHelper.WiXParams},System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Run WiX setup build script
+</summary>
+</member>
+<member name="M:Fake.WiX.WiXHelper.runCandle(Fake.WiX.WiXHelper.WiXParams)">
+<summary>
+ runs the Candle tool
+</summary>
+</member>
+<member name="P:Fake.WiX.WiXHelper.WiXDefaults">
+<summary>
+ WiX Default params  
+</summary>
+</member>
+<member name="T:Fake.WiX.WiXHelper">
+
+</member>
+</members>
+</doc>
