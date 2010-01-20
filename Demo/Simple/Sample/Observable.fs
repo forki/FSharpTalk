@@ -14,13 +14,6 @@ let asAction f = new System.Action(f)
 /// System.Action whichs does nothing
 let doNothing = asAction (fun () -> ())
 
-/// Creates an observer
-let createObserver next error completed =
-  {new System.IObserver<_> with
-      member this.OnCompleted() = completed()
-      member this.OnError(e) = error e
-      member this.OnNext(args) = next args}
-      
 /// Creates a new observable 
 let create f : 'a observable =
   Observable.Create<_>(fun x ->
