@@ -24,17 +24,9 @@ let number =
 let toIntList s = 
   [for x in s -> System.Int32.Parse(x.ToString())]        
   
-let rec test n = 
-  match n with 
-    | a::(b::c::d::e::_ as rest) ->
-        let prod = a*b*c*d*e
-        let x = a,b,c,d,e,prod 
-        let a2,b2,c2,d2,e2,prod2 = test rest
-        if prod > prod2 then
-          x
-        else
-          a2,b2,c2,d2,e2,prod2
-    | _ -> 0,0,0,0,0,0
+let rec test = function
+  | a::(b::c::d::e::_ as rest) -> max (a*b*c*d*e) (test rest)        
+  | _ -> 0
     
 number
   |> toIntList

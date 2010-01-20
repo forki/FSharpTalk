@@ -8,8 +8,10 @@ let isPalindrome (s:string) =
   Array.rev a = a
 
 let numbers n = 
-  seq{for i in n..1 do
-       for j in n..1 do
+  seq{for a in 1..n do
+       let i = n - a
+       for b in 1..n do        
+         let j = n - b
          let s = (i*j).ToString()
          yield i*j,i,j, isPalindrome s}
         

@@ -1,16 +1,18 @@
-﻿#load "TimeHelper.fs"
+﻿#r "System.Numerics"
+#load "TimeHelper.fs"
 open Demo
 open System
 open Microsoft.FSharp.Math
+open System.Numerics
 
 /// returns all primes up to n 
 /// Sieve of Eratosthenes
-let primes (n:bigint) =    
-  let max = bigint.ToDouble n |> Math.Sqrt
+let primes (n:BigInteger) =    
+  let max = double n |> Math.Sqrt
   let rec filterPrimes L =
     match L with
       | x::L -> 
-        if bigint.ToDouble x <= max then
+        if double x <= max then
           x :: filterPrimes (List.filter (fun num -> num % x <> 0I) L)
         else
           x::L

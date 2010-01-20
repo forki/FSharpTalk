@@ -1,4 +1,5 @@
-﻿open Microsoft.FSharp.Math
+﻿#r "System.Numerics"
+open Microsoft.FSharp.Math
 
 let rec sum_of_digits n =
   match n with
@@ -6,12 +7,14 @@ let rec sum_of_digits n =
     | _ -> n % 10I + sum_of_digits (n / 10I) 
     
 /// What is the sum of the digits of the number 2^1000?
-bigint.Pow(2I,1000I) 
+System.Numerics.BigInteger.Pow(2I,1000) 
   |> sum_of_digits 
   |> printfn "Quersumme von 2^1000 = %A"
 
 // -----------------------------------------------
 // Find the sum of the digits in the number 100!"
-bigint.Factorial(100I) 
+let factorial x = List.fold (*) 1I [1I..x]
+  
+factorial 100I
   |> sum_of_digits 
   |> printfn "Quersumme von 100! = %A"

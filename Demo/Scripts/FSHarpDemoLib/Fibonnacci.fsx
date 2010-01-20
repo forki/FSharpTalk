@@ -6,9 +6,7 @@ open Microsoft.FSharp.Math
 
 #nowarn "40"
 
-////
 //// Memoization sample 
-////
 let memoize f =
   let cache = Dictionary<_, _>()
   fun x ->

@@ -1,4 +1,6 @@
-﻿/// A very simple constant integer
+﻿#r "System.Numerics"
+
+/// A very simple constant integer
 let int1 = 1
 
 /// A second very simple constant integer

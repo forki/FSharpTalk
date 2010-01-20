@@ -1,6 +1,4 @@
-﻿#light
-
-// using immutable lists
+﻿// using immutable lists
 
 /// The empty list
 let listA = [ ]           
@@ -31,8 +29,8 @@ let squaresOfOneToTen = [ for x in 0..10 -> x*x ]
  
 let data = [1;2;3;4]
 printfn "data = \n%A" data
-printfn "List.hd data = %d" (List.hd data)
-printfn "List.tl data = \n%A" (List.tl data)
+printfn "List.hd data = %d" (List.head data)
+printfn "List.tl data = \n%A" (List.tail data)
 printfn "List.length data = %d" (List.length data)
 
 // pattern matching with lists

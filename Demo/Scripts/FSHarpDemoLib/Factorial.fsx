@@ -1,6 +1,7 @@
-////
+#r "System.Numerics"
+
+
 //// Factorial sample 
-////
 let rec factorialBad x = 
   match x with
     | y when y = 0I -> 1I
@@ -30,6 +31,7 @@ let rec fac x =
     | y when y = 0I -> 1I
     | _ -> x * fac(x-1I)     
          
+let factorialByFold x = List.fold (*) 1I [1I..x]
     
 fac 100I
   |> sum_of_digits

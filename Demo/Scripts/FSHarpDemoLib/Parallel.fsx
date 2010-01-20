@@ -1,16 +1,18 @@
 ﻿#r "System.Threading"
 #r "System.Core"
+#r "System.Numerics"
 
 open System
 open System.Diagnostics
 open Microsoft.FSharp.Math
+open System.Numerics
 
 let testRuntime f =
   let watch = new Stopwatch()
   watch.Start()
   (f(),watch.Elapsed)
   
-let fac (x:bigint) = [1I..x] |> List.fold (*) 1I
+let fac (x:BigInteger) = [1I..x] |> List.fold (*) 1I
 
 let sequentialSum() =
   [1I..3000I]
@@ -27,10 +29,10 @@ printfn "Result: %A" sumSequential
 open System.Linq
 
 /// Type wrapper over the IParallelEnumerable
-type pseq<'a> = IParallelEnumerable<'a> 
+type pseq<'a> = ParallelQuery<'a> 
 
 /// This is the method to opt into Parallel LINQ.
-let adapt : seq<'a> -> pseq<'a> =  ParallelQuery.AsParallel 
+let adapt (x : seq<'a>) : pseq<'a> = x.AsParallel()
 
 /// Parallel implementation of System.Linq.Enumerable.Select().
 let map (f:'a -> 'b) (pe:pseq<'a>) : pseq<'b> = 

@@ -43,7 +43,7 @@ form.Paint.Add (fun args ->
            paintObject.Paint(g)
 
         // Invalidate the form again in 10 milliseconds to get continuous update
-        async { do! System.Threading.Thread.AsyncSleep(10)
+        async { do! Async.Sleep(10)
                 form.Invalidate() } |> Async.Start
    )
 
