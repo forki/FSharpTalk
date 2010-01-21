@@ -5,17 +5,17 @@
     Body: string}
 
 type SpamResult =
-  | Spam
-  | OK
-  | Unknown
+| Spam
+| OK
+| Unknown
 
 let checkMail rules (mail:EMail) =
   let rec checkRule rules =
     match rules with
     | rule::rest ->
           match rule mail with
-          | Unknown    -> checkRule rest
-          | other -> other
+          | Unknown -> checkRule rest
+          | other   -> other
     | [] -> Unknown
 
   checkRule rules
@@ -31,6 +31,7 @@ let mySecondRule mail =
   // I don’t care about this
   Spam
 
+// Bootstrapping
 let ruleChecker =
   checkMail
     [ myFirstRule;
@@ -39,16 +40,16 @@ let ruleChecker =
   
 // using option types
 type SpamResult2 =
-  | Spam
-  | OK
+| Spam
+| OK
   
 let checkRules rules element =
   let rec checkRule rules =
     match rules with
     | rule::rest ->
-          match rule element with
-          | None -> checkRule rest
-          | _ as other -> other
+        match rule element with
+        | None       -> checkRule rest
+        | _ as other -> other
     | [] -> None
 
   checkRule rules  
@@ -72,4 +73,4 @@ let ruleChecker2 =
 let checkRules2 rules element =
   List.tryPick ((|>) element) rules
   
-// http://www.navision-blog.de       
+// see http://www.navision-blog.de       

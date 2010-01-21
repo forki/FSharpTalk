@@ -34,13 +34,13 @@ namespace CSharp
             return SpamResult.Unknown;
         }
 
-        private SpamResult TestRule1(EMail mail)
+        private static SpamResult TestRule1(EMail mail)
         {
             // I don’t care about the concrete rules
             return SpamResult.Unknown;
         }
 
-        private SpamResult TestRule2(EMail mail)
+        private static SpamResult TestRule2(EMail mail)
         {
             // I don’t care about the concrete rules
             return SpamResult.Ok;
@@ -104,6 +104,7 @@ namespace CSharp
     {
         public void Check(EMail mail)
         {
+            // Bootstrapping
             var ruleChecker =
                 new RuleChecker(
                     new List<ISpamRule>

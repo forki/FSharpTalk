@@ -26,7 +26,7 @@ form.Controls.Add textBox2
 
 /// create a list with "common" words
 let data =
-  ["hell"; "Hello"; "Halle"; "Bonn"; "Bonjour"; "Steffen"]
+  ["hell"; "Hello"; "Halle"; "Bonn"; "Bonjour"; "Steffen"; "Bad Homburg"; "Hamburg"]
 
 
 let findWords prefix =  
@@ -52,8 +52,8 @@ let observer1 =
 let observer2 =
   wordsFound 
     |> Observable.filter (fun words -> Seq.length words = 1)     
-    |> Observable.throttle (System.TimeSpan.FromSeconds(1.5))
+    |> Observable.throttle (System.TimeSpan.FromSeconds 1.5)
     |> Observable.map (fun words -> Seq.head words)
     |> Observable.subscribe (fun word -> 
-         printfn "Text completed"
+         printfn "Text completed to %s" word
          textBox1.Text <- word) 

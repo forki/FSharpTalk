@@ -17,12 +17,11 @@ let form = new Form(Visible=true, TopMost=true)
 let left,right =  
   form.MouseDown
     |> Observable.fromEvent
-    |> Observable.mergeWith (form.MouseMove |> Observable.fromEvent)
-    |> Observable.filter (fun args ->  
-          args.Button = MouseButtons.Left || 
-          args.Button = MouseButtons.Right)
+    |> Observable.mergeWith (form.MouseMove |> Observable.fromEvent)    
     |> Observable.map (fun args -> args.X, args.Y, args.Button)
-    |> Observable.filter (fun (x,y,b) -> y < 100)
+    |> Observable.filter (fun (x,y,_) -> y < 100 && x > 100)
+    |> Observable.filter (fun (_,_,button) ->  
+          button = MouseButtons.Left || button = MouseButtons.Right)
     |> Observable.partition (fun (_,_,button) -> 
          button = MouseButtons.Left)
     
