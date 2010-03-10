@@ -7,7 +7,7 @@ module TestData =
       let r = new System.Random()
       [for i in 1..n -> typeF(r.Next 100)]
       
-    let bigint (x:int) = Math.bigint x
+    let bigint (x:int) = bigint x
     let list2 = randomList int 10000
 
     let list3 = randomList int 10000000
